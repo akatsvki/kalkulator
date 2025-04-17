@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Scientific</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="display">
+            <div class="history" id="history"></div>
+            <div class="current" id="current">0</div>
+        </div>
+        
+        <div class="buttons">
+            <!-- Baris 1 -->
+            <button class="btn func" onclick="clearAll()">AC</button>
+            <button class="btn func" onclick="backspace()"><i class="fas fa-backspace"></i></button>
+            <button class="btn func" onclick="appendToDisplay('%')">%</button>
+            <button class="btn func" onclick="appendToDisplay('/')">/</button>
+            
+            <!-- Baris 2 -->
+            <button class="btn sci" onclick="calculateFunction('sin(')">sin</button>
+            <button class="btn sci" onclick="calculateFunction('cos(')">cos</button>
+            <button class="btn sci" onclick="calculateFunction('tan(')">tan</button>
+            <button class="btn op" onclick="appendToDisplay('*')">×</button>
+            
+            <!-- Baris 3 -->
+            <button class="btn sci" onclick="calculateFunction('log(')">log</button>
+            <button class="btn sci" onclick="calculateFunction('ln(')">ln</button>
+            <button class="btn sci" onclick="appendToDisplay('Math.PI')">π</button>
+            <button class="btn op" onclick="appendToDisplay('-')">-</button>
+            
+            <!-- Baris 4 -->
+            <button class="btn sci" onclick="appendToDisplay('(')">(</button>
+            <button class="btn sci" onclick="appendToDisplay(')')">)</button>
+            <button class="btn sci" onclick="appendToDisplay('Math.E')">e</button>
+            <button class="btn op" onclick="appendToDisplay('+')">+</button>
+            
+            <!-- Baris 5 -->
+            <button class="btn sci" onclick="calculateFunction('Math.sqrt(')">√</button>
+            <button class="btn sci" onclick="appendToDisplay('^2')">x²</button>
+            <button class="btn sci" onclick="appendToDisplay('^')">x^y</button>
+            <button class="btn sci" onclick="calculateFunction('factorial(')">x!</button>
+            
+            <!-- Baris 6 -->
+            <button class="btn num" onclick="appendToDisplay('7')">7</button>
+            <button class="btn num" onclick="appendToDisplay('8')">8</button>
+            <button class="btn num" onclick="appendToDisplay('9')">9</button>
+            
+            <!-- Baris 7 -->
+            <button class="btn num" onclick="appendToDisplay('4')">4</button>
+            <button class="btn num" onclick="appendToDisplay('5')">5</button>
+            <button class="btn num" onclick="appendToDisplay('6')">6</button>
+            
+            <!-- Baris 8 -->
+            <button class="btn num" onclick="appendToDisplay('1')">1</button>
+            <button class="btn num" onclick="appendToDisplay('2')">2</button>
+            <button class="btn num" onclick="appendToDisplay('3')">3</button>
+            
+            <!-- Baris 9 -->
+            <button class="btn num" onclick="appendToDisplay('0')">0</button>
+            <button class="btn num" onclick="appendToDisplay('.')">.</button>
+            <button class="btn eq" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
